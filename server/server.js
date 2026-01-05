@@ -12,6 +12,7 @@ app.use(express.json());
 // app.use('/api/profile', require('./routes/api/profile'));
 // app.use('/api/posts', require('./routes/api/posts'));
 app.use('/notes', require('./routes/api/notes'));
+app.use('/piyushapitest', require('./routes/api/piyushapitest'));
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
@@ -23,6 +24,7 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-const PORT = parseInt(Math.random() * 4000 + 1000);
+// const PORT = parseInt(Math.random() * 4000 + 1000);
+const PORT = 5000
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
