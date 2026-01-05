@@ -7,10 +7,11 @@ const app = express();
 app.use(express.json());
 
 // Define Routes
-app.use('/api/users', require('./server/routes/api/users'));
-app.use('/api/auth', require('./server/routes/api/auth'));
-app.use('/api/profile', require('./server/routes/api/profile'));
-app.use('/api/posts', require('./server/routes/api/posts'));
+// app.use('/api/users', require('./routes/api/users'));
+// app.use('/api/auth', require('./routes/api/auth'));
+// app.use('/api/profile', require('./routes/api/profile'));
+// app.use('/api/posts', require('./routes/api/posts'));
+app.use('/notes', require('./routes/api/notes'));
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
